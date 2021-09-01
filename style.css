@@ -36,7 +36,7 @@ p {
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
@@ -57,6 +57,7 @@ p {
 	margin-top: 30px;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
+	cursor: pointer;
 }
 .cta:hover {
 	color: white;
@@ -408,19 +409,24 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
+#projects a{
+	display: contents;
+	
+}
 /* End Projects section */
 
 /* About Section */
 #about .about {
-	flex-direction: column-reverse;
+	flex-direction: column;
 	text-align: center;
 	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 0px;
+	margin: 10px auto 0;
+	padding: 10px 20px;
 }
 #about .col-left {
 	width: 250px;
-	height: 360px;
+	height: 240px;
+	margin: 0 auto 50px;
 }
 #about .col-right {
 	width: 100%;
@@ -430,21 +436,24 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	margin-bottom: 10px;
+	text-align: center;
 }
 #about .col-right p {
 	margin-bottom: 0px;
+	text-justify: inter-word;	
 }
 #about .col-right .cta {
-	color: black;
-	margin-bottom: 0px;
+	margin-bottom: 40px;
 	padding: 10px 20px;
 	font-size: 2rem;
 }
+
 #about .col-left .about-img {
-	height: 70%;
+	height: 100%;
 	width: 70%;
 	position: relative;
 	border: 10px solid white;
+	margin: 0px auto 0px;
 }
 #about .col-left .about-img::after {
 	content: '';
@@ -457,6 +466,17 @@ p {
 	z-index: -1;
 }
 /* End About Section */
+.fa.fa-linkedin{
+    font-size:44px ;
+    color: crimson;
+}
+.fa.fa-linkedin:hover{
+    color: white;
+}
+
+.inh{ 
+	color: inherit; 
+}
 
 /* contact Section */
 #contact .contact {
@@ -628,13 +648,13 @@ p {
 		flex-direction: row;
 	}
 	#about .col-left {
-		width: 600px;
-		height: 400px;
+		width: 800px;
+		height: 300px;
 		padding-left: 60px;
 	}
 	#about .about .col-left .about-img::after {
-		left: -45px;
-		top: 34px;
+		left: -35px;
+		top: 24px;
 		height: 98%;
 		width: 98%;
 		border: 10px solid crimson;
@@ -642,9 +662,13 @@ p {
 	#about .col-right {
 		text-align: left;
 		padding: 30px;
+
 	}
 	#about .col-right h1 {
-		text-align: left;
+		text-align: center;
+	}
+	#about .cta2{
+		float: right;
 	}
 	/* End About */
 
@@ -718,83 +742,3 @@ p {
 
 
 
-@media only screen and (max-width: 720px) {
-	.about-img, .col-3{
-		text-align: center;
-		margin: auto;
-	}
-}
-
-
-
-
-
-
-.section-title2 {
-	font-size: 3rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
-}
-.section-title2 span {
-	color: crimson;
-}
-
-/* --------testimonials------- */
-.testimonials{
-    padding-top: 10px;
-}
-.testimonials .col-3{
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1) ;
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-.testimonials .col-3 img{
-    width: 100px;
-    margin-top: 20px;
-    border-radius: 30%;
-}
-.testimonials .col-3:hover{
-    transform: translateY(-10px);
-}
-.fa.fa-linkedin{
-    font-size:34px ;
-    color: #ff523b;
-}
-.col-3 p{
-    font-size: 12px;
-    margin:12px 0 ;
-    color: #777;
-
-}
-.testimonials .col-3 h3{
-    font-weight: 600;
-    color: #555;
-    font-size: 16px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-.col-3 img{
-    width: 100%;
-}
